@@ -1,0 +1,225 @@
+{
+  "@context": {
+    "dc" : "http://purl.org/dc/terms/",
+    "nfo" : "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo",
+    "nie" : "http://www.semanticdesktop.org/ontologies/2007/01/19/nie/",
+    "contains" : {"@reverse" : "nfo:belongsToContainer"}
+  },
+  "@id" : "prd.shurin.001",
+  "@type" : "nfo:DataContainer",
+  "nie:title" : "Images",
+  "contains" : [
+    {
+      "@id" : "apt://columbia.edu/prd.urashima/data/boxcover.tif",
+      "@type" : "nfo:DataContainer",
+      "nie:title" : "[Box cover front]"
+    },
+    {
+      "@type" : "nfo:DataContainer",
+      "nie:title" : "[Vol. 1]",
+      "contains" : [
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume1cover.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 1, cover front]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume1page1.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 1, image 1]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume1page2.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 1, image 1]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume1page1.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 1, image 2]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume1page3.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 1, image 3]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume1page4.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 1, image 4]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume1page5.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 1, image 5]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume1page6.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 1, image 6]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume1page7.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 1, image 7]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume1page8.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 1, image 8]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume1page9.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 1, image 9]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume1page10.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 1, image 10]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume1page11.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 1, image 11]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume1page12.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 1, image 12]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume1page13.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 1, image 13"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume1page14.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 1, image 14]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume1page15.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 1, image 15]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume1page16.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 1, image 16]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume1page17.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 1, image 17]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume1backcover.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 1, cover back]"
+        }
+      ]
+    },
+    {
+      "@type" : "nfo:DataContainer",
+      "nie:title" : "[Vol. 2]",
+      "contains" : [
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume2cover.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 2, cover front]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume2page1.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 2, image 1]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume2page2.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 2, image 1]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume2page1.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 2, image 2]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume2page3.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 2, image 3]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume2page4.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 2, image 4]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume2page5.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 2, image 5]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume2page6.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 2, image 6]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume2page7.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 2, image 7]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume2page8.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 2, image 8]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume2page9.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 2, image 9]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume2page10.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 2, image 10]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume2page11.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 2, image 11]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume2page12.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 2, image 12]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume2page13.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 2, image 13"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume2page14.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 2, image 14]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume2page15.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 2, image 15]"
+        },
+        {
+          "@id" : "apt://columbia.edu/prd.urashima/data/volume2backcover.tif",
+          "@type" : "nfo:DataContainer",
+          "nie:title" : "[vol. 2, cover back]"
+        },
+      ]
+    },
+    {
+      "@id" : "apt://columbia.edu/prd.urashima/data/boxcoverback.tif",
+      "@type" : "nfo:DataContainer",
+      "nie:title" : "[Box cover back]"
+    }
+  ]
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<title>JSON-LD structMetadata and jQuery File Tree Demo</title>
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />		
+		<script src="javascripts/jquery.min.js" type="text/javascript"></script>
+		<script src="javascripts/fileSystem.js" type="text/javascript"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/fileSystem.css"/>
+		
+		<script type="text/javascript">
+			function fileModal(t) {
+        var modal = $('#file-modal');
+        modal.find('.modal-title').html(t.text());
+        modal.find('.mime-value').html(t.attr('data-mime'));
+        modal.find('.filesize-value').html(t.attr('data-filesize'));
+        modal.modal({});
+      }
+      $(document).ready( function() { $('.fileSystem').each(function(ix) { $(this).fileSystem(fileModal)})});
+		</script>
+
+	</head>
+	
+	<body>
+		
+    <h1>JSON-LD structMetadata and jQuery File Tree Demo</h1>
+    <div class="panel-group" id="panels">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" data-parent="#panels" href="#collapseDescription">structMetadata for File System-like Archives</a></h2>
+        </div>
+        <div id="collapseDescription" class="panel-collapse collapse in">
+          <div class="panel-body">
+            <p>Our digital repository is tasked with the storage and online navigation of file  archives representing independent file systems. The problem of how to represent these archives in practical way to the curators of such content is not novel: When modeling content for a digital repository the problem of representing ordered or structured content surfaces almost immediately ("How do we represent a book?"). In the case of a Fedora Commons repository, the shallow RDF of inter-object relationships makes these representatons difficult and/or cumbersome.</p>
+            <p>One alternative to numerous empty repository nodes/objects representing intermediate structure is maintaining a simple structure in the repository, but describing the structure of object members in stored data. To borrow the naming pattern of Project Hydra, an encapsulating object can be given structMetadata indicating how its member objects should be arranged.</p>
+            <p>Ideally, in the context of a repository invested in preservation or shareability, such structural description would take recourse to a well-supported standard of practice.</p>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" data-parent="#panels" href="#collapseMets">XML structMetadata</a></h2>
+        </div>
+        <div id="collapseMets" class="panel-collapse collapse in">
+          <div class="panel-body">
+            <p>Absent another commonly used XML standard for describing nested object structure, one might use a METS structMap. Unless an entire METS document is to be reproduced, the structMap would overload &lt;mets:div&gt; elements to represent folders and files.</p><p> This document type is difficult to extend with information outside the METS schema, and requires complex markup to leverage the flexibility of METS (fileSec, fptr, etc. along with the mets container). It must also be transformed to be practically actionable by web clients.</p>
+            <div id="mets-example">
+              <pre><code>&lt;mets:structMap xmlns:mets="http://www.loc.gov/METS/" LABEL="jsonld-structMetadata" TYPE="physical"&gt;
+  &lt;mets:div LABEL="data" ORDER="1" TYPE="folder"&gt;
+    &lt;mets:div LABEL="div-example.json" ORDER="1" CONTENTIDS="github.com/barmintor/jsonld-structMetadata/data/div-example.json" TYPE="file"/&gt;
+    &lt;mets:div LABEL="filesystem" ORDER="2" TYPE="folder"&gt;
+      &lt;mets:div LABEL="fs-example.json" ORDER="1" CONTENTIDS="github.com/barmintor/jsonld-structMetadata/data/filesystem/fs-example.json" TYPE="file"/&gt;
+      &lt;mets:div LABEL="fs-example.xml" ORDER="2" CONTENTIDS="github.com/barmintor/jsonld-structMetadata/data/filesystem/fs-example.xml" TYPE="file"/&gt;
+    &lt;/mets:div&gt;
+    &lt;mets:div LABEL="fs-example.json" ORDER="3" CONTENTIDS="github.com/barmintor/jsonld-structMetadata/data/fs-example.json" TYPE="file"/&gt;
+    &lt;mets:div LABEL="rv-example.json" ORDER="4" CONTENTIDS="github.com/barmintor/jsonld-structMetadata/data/rv-example.json" TYPE="file"/&gt;
+  &lt;/mets:div&gt;
+&lt;/mets:structMap&gt;</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" data-parent="#panels" href="#collapseJson">JSON-LD structMetadata</a></h2>
+        </div>
+        <div id="collapseJson" class="panel-collapse collapse">
+          <div class="panel-body">
+            <p>JSON-LD, on the other hand, is easily extensible (as linked data) and immediately actionable by web clients. Further, the <a href="http://nepomuk.semanticdesktop.org/Participants.html">NEPOMUK Consortium</a> has developed well-elaborated ontologies for describing file system-like hierarchies of data that are a superset of METS descriptions.</p>
+            <div id="jsonld-example">
+              <pre><code>{
+  "@context": {
+    "dc" : "http://purl.org/dc/terms/",
+    "nfo" : "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo",
+    "nie" : "http://www.semanticdesktop.org/ontologies/2007/01/19/nie/",
+    "contains" : {"@reverse" : "nfo:belongsToContainer"}
+  },
+  "@id" : "github.com/barmintor/jsonld-structMetadata/",
+  "@type" : "nfo:Filesystem",
+  "nie:title" : "jsonld-structMetadata",
+  "contains" : [
+    {
+      "@type" : "nfo:Folder",
+      "nie:title" : "data",
+      "contains" : [
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/data/div-example.json",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "div-example.json",
+          "nfo:fileSize" : 7837,
+          "dc:format" : "application/json"
+        },
+        {
+          "@type" : "nfo:Folder",
+          "nie:title" : "filesystem",
+          "contains" : [
+            {
+              "@id" : "github.com/barmintor/jsonld-structMetadata/data/filesystem/fs-example.json",
+              "@type" : "nfo:FileDataObject",
+              "nfo:fileName" : "fs-example.json",
+              "nfo:fileSize" : 9440,
+              "dc:format" : "application/json"
+            },
+            {
+              "@id" : "github.com/barmintor/jsonld-structMetadata/data/filesystem/fs-example.xml",
+              "@type" : "nfo:FileDataObject",
+              "nfo:fileName" : "fs-example.xml",
+              "nfo:fileSize" : 506,
+              "dc:format" : "text/xml"
+            }
+          ]
+        },
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/data/rv-example.json",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "rv-example.json",
+          "nfo:fileSize" : 616,
+          "dc:format" : "application/json"
+        }
+      ]
+    }
+  ]
+}</code></pre>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" data-parent="#panels" href="#collapseDemo">Navigating file structure described in JSON-LD with jQuery</a></h2>
+        </div>
+        <div id="collapseDemo" class="panel-collapse collapse">
+          <p>The data at <a href="./data/filesystem/fs-example.json">data/filesystem/fs-example.json</a> describes the files of this web project as a file system/archive. Below is a simple jQuery widget demonstrating the navigation of such a hierarchy in a web page (icons courtesy <a href="http://www.abeautifulsite.net/">A Beautiful Site</a>).</p>
+          <div class="panel-body">
+
+            <ul class="fileSystem fileTree" data-src="./data/filesystem/fs-example.json"><li class="folder wait">Loading...</li></ul>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h2 class="panel-title"><a class="accordion-toggle" data-toggle="collapse" data-parent="#panels" href="#collapseCited">Citations</a></h2>
+        </div>
+        <div id="collapseCited" class="panel-collapse collapse">
+          <div class="panel-body">
+            <figure>
+            <figcaption><cite><a href="http://www.abeautifulsite.net/blog/2008/03/jquery-file-tree/">JQUERY FILE TREE</a></cite></figcaption>
+            <p>
+            Javascript widget and icons inspired by/adapted from/borrowed from <a href="http://www.abeautifulsite.net/blog/2008/03/jquery-file-tree/">Cory Laviska's jQuery file tree</a>.
+            </p>
+            </figure>
+            <figure>
+              <figcaption><cite><a href="http://json-ld.org/">JSON for Linking Data</a></cite></figcaption>
+              <blockquote>JSON-LD is a lightweight Linked Data format. It is easy for humans to read and write. It is based on the already successful JSON format and provides a way to help JSON data interoperate at Web-scale. JSON-LD is an ideal data format for programming environments, REST Web services, and unstructured databases such as CouchDB and MongoDB.</blockquote>
+            </figure>
+            <figure>
+              <figcaption><cite><a href="http://www.semanticdesktop.org/ontologies/">OSCAF Ontologies</a></cite></figcaption>
+              <blockquote>The OSCAF ontologies derive from the contributions to a number of large-scale efforts, starting with the European project NEPOMUK (2006-2008), continuing with their adoption (and extension) by the KDE community (2009-2013), and their further extension by a second European project Digital.Me (2010-2013).</blockquote>
+            </figure>
+            <figure>
+              <figcaption><cite><a href="http://dublincore.org/documents/dcmi-terms/">DCMI Metadata Terms</a></cite></figcaption>
+              <p></p> 
+            </figure>
+            <figure>
+              <figcaption><cite><a href="">METS Overview: structMap</a></cite></figcaption>
+              <blockquote>The structural map section of a METS document defines a hierarchical structure which can be presented to users of the digital library object to allow them to navigate through it. The &lt;structMap&gt; element encodes this hierarchy as a nested series of &lt;div&gt; elements. Each &lt;div&gt; carries attribute information specifying what kind of division it is, and also may contain multiple METS pointer (&lt;mptr&gt;) and file pointer (&lt;fptr&gt;) elements to identify content corresponding with that &lt;div&gt;. METS pointers specify separate METS documents as containing the relevant file information for the &lt;div&gt; containing them. This can be useful when encoding large collections of material (e.g., an entire journal run) to keep the size of each METS file in the set relatively small. File pointers specify files (or in some cases either groups of files or specific locations within a file) within the current METS document's &lt;fileSec&gt; section that correspond to the portion in the hierarchy represented by the current &lt;div&gt;.</blockquote> 
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal" id="file-modal" tabindex="-1" role="dialog">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title"></h4>
+          </div>
+          <div class="modal-body">
+            <dl>
+              <dt>MIME Type</dt><dd class="mime-value"></dd>
+              <dt>File Size</dt><dd class="filesize-value"></dd>
+              <dt>Link</dt><dd><a href="" class="modal-title"></a></dd>
+            </dl>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+	</body>
+	
+</html>

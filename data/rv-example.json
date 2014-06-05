@@ -1,0 +1,23 @@
+{
+  "@context": {
+    "dc" : "http://purl.org/dc/terms/",
+    "nfo" : "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo",
+    "nie" : "http://www.semanticdesktop.org/ontologies/2007/01/19/nie/",
+    "contains" : {"@reverse" : "nfo:belongsToContainer"}
+  },
+  "@id" : "burke_lindq_042_0434",
+  "@type" : "nfo:DataContainer",
+  "nie:title" : "Sides",
+  "contains" : [
+    {
+      "@id" : "burke_lindq_042_0434r",
+      "@type" : "nfo:DataContainer",
+      "nie:title" : "[Recto]"
+    },
+    {
+      "@id" : "burke_lindq_042_0434v",
+      "@type" : "nfo:DataContainer",
+      "nie:title" : "[Verso]"
+    }
+  ]
+}

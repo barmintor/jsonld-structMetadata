@@ -1,0 +1,274 @@
+{
+  "@context": {
+    "dc" : "http://purl.org/dc/terms/",
+    "nfo" : "http://www.semanticdesktop.org/ontologies/2007/03/22/nfo",
+    "nie" : "http://www.semanticdesktop.org/ontologies/2007/01/19/nie/",
+    "contains" : {"@reverse" : "nfo:belongsToContainer"}
+  },
+  "@id" : "github.com/barmintor/jsonld-structMetadata/",
+  "@type" : "nfo:Filesystem",
+  "nie:title" : "jsonld-structMetadata",
+  "contains" : [
+    {
+      "@type" : "nfo:Folder",
+      "nie:title" : "data",
+      "contains" : [
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/data/div-example.json",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "div-example.json",
+          "nfo:fileSize" : 7837,
+          "dc:format" : "application/json"
+        },
+        {
+          "@type" : "nfo:Folder",
+          "nie:title" : "filesystem",
+          "contains" : [
+            {
+              "@id" : "github.com/barmintor/jsonld-structMetadata/data/filesystem/fs-example.json",
+              "@type" : "nfo:FileDataObject",
+              "nfo:fileName" : "fs-example.json",
+              "nfo:fileSize" : 9425,
+              "dc:format" : "application/json"
+            },
+            {
+              "@id" : "github.com/barmintor/jsonld-structMetadata/data/filesystem/fs-example.xml",
+              "@type" : "nfo:FileDataObject",
+              "nfo:fileName" : "fs-example.xml",
+              "nfo:fileSize" : 506,
+              "dc:format" : "text/xml"
+            }
+          ]
+        },
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/data/rv-example.json",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "rv-example.json",
+          "nfo:fileSize" : 616,
+          "dc:format" : "application/json"
+        }
+      ]
+    },
+    {
+      "@type" : "nfo:Folder",
+      "nie:title" : "images",
+      "contains" : [
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/images/application.png",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "application.png",
+          "nfo:fileSize" : 464,
+          "dc:format" : "image/png"
+        },
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/images/code.png",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "code.png",
+          "nfo:fileSize" : 603,
+          "dc:format" : "image/png"
+        },
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/images/css.png",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "css.png",
+          "nfo:fileSize" : 618,
+          "dc:format" : "image/png"
+        },
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/images/db.png",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "db.png",
+          "nfo:fileSize" : 579,
+          "dc:format" : "image/png"
+        },
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/images/directory.png",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "directory.png",
+          "nfo:fileSize" : 537,
+          "dc:format" : "image/png"
+        },
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/images/doc.png",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "doc.png",
+          "nfo:fileSize" : 651,
+          "dc:format" : "image/png"
+        },
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/images/file.png",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "file.png",
+          "nfo:fileSize" : 294,
+          "dc:format" : "image/png"
+        },
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/images/film.png",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "film.png",
+          "nfo:fileSize" : 653,
+          "dc:format" : "image/png"
+        },
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/images/flash.png",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "flash.png",
+          "nfo:fileSize" : 582,
+          "dc:format" : "image/png"
+        },
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/images/folder_open.png",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "folder_open.png",
+          "nfo:fileSize" : 583,
+          "dc:format" : "image/png"
+        },
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/images/html.png",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "html.png",
+          "nfo:fileSize" : 734,
+          "dc:format" : "image/png"
+        },
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/images/java.png",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "java.png",
+          "nfo:fileSize" : 633,
+          "dc:format" : "image/png"
+        },
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/images/linux.png",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "linux.png",
+          "nfo:fileSize" : 668,
+          "dc:format" : "image/png"
+        },
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/images/music.png",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "music.png",
+          "nfo:fileSize" : 385,
+          "dc:format" : "image/png"
+        },
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/images/pdf.png",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "pdf.png",
+          "nfo:fileSize" : 591,
+          "dc:format" : "image/png"
+        },
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/images/php.png",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "php.png",
+          "nfo:fileSize" : 538,
+          "dc:format" : "image/png"
+        },
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/images/picture.png",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "picture.png",
+          "nfo:fileSize" : 606,
+          "dc:format" : "image/png"
+        },
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/images/ppt.png",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "ppt.png",
+          "nfo:fileSize" : 588,
+          "dc:format" : "image/png"
+        },
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/images/psd.png",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "psd.png",
+          "nfo:fileSize" : 856,
+          "dc:format" : "image/png"
+        },
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/images/ruby.png",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "ruby.png",
+          "nfo:fileSize" : 626,
+          "dc:format" : "image/png"
+        },
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/images/script.png",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "script.png",
+          "nfo:fileSize" : 859,
+          "dc:format" : "image/png"
+        },
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/images/spinner.png",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "spinner.png",
+          "nfo:fileSize" : 2530,
+          "dc:format" : "image/png"
+        },
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/images/txt.png",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "txt.png",
+          "nfo:fileSize" : 342,
+          "dc:format" : "image/png"
+        },
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/images/xls.png",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "xls.png",
+          "nfo:fileSize" : 663,
+          "dc:format" : "image/png"
+        },
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/images/zip.png",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "zip.png",
+          "nfo:fileSize" : 386,
+          "dc:format" : "image/png"
+        }
+      ]
+    },
+    {
+      "@type" : "nfo:Folder",
+      "nie:title" : "javascripts",
+      "contains" : [
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/javascripts/jquery.min.js",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "jquery.min.js",
+          "nfo:fileSize" : 95785,
+          "dc:format" : "text/javascript"
+        },
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/javascripts/fileSystem.js",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "fileSystem.js",
+          "nfo:fileSize" : 1725,
+          "dc:format" : "text/javascript"
+        }
+      ]
+    },
+    {
+      "@type" : "nfo:Folder",
+      "nie:title" : "stylesheets",
+      "contains" : [
+        {
+          "@id" : "github.com/barmintor/jsonld-structMetadata/stylesheets/fileSystem.css",
+          "@type" : "nfo:FileDataObject",
+          "nfo:fileName" : "fileSystem.css",
+          "nfo:fileSize" : 1435,
+          "dc:format" : "text/css"
+        }
+      ]
+    },
+    {
+      "@id" : "github.com/barmintor/jsonld-structMetadata/index.html",
+      "@type" : "nfo:FileDataObject",
+      "nfo:fileName" : "index.html",
+      "nfo:fileSize" : 12480,
+      "dc:format" : "text/html"
+    }
+  ]
+}

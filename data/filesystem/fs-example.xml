@@ -1,0 +1,13 @@
+<mets:structMap xmlns:mets="http://www.loc.gov/METS/" LABEL="xml-structMetadata" TYPE="physical">
+  <mets:div LABEL="data" ORDER="1">
+    <mets:div LABEL="div-example.json" CONTENTIDS="github.com/barmintor/jsonld-structMetadata/data/div-example.json"/>
+  </mets:div>
+  <mets:div LABEL="images" ORDER="2">
+  </mets:div>
+  <mets:div LABEL="javascripts" ORDER="3">
+  </mets:div>
+  <mets:div LABEL="stylesheets" ORDER="4">
+  </mets:div>
+  <mets:div LABEL="index.html" ORDER="5">
+  </mets:div>
+</mets:structMap>
